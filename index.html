@@ -64,12 +64,6 @@
       font-style: italic;
     }
 
-    header img {
-      margin-top: 20px;
-      border-radius: 50%;
-      border: 5px solid white;
-    }
-
     section {
       padding: 20px;
       margin: 40px auto;
@@ -137,6 +131,12 @@
       text-decoration: underline;
     }
 
+    .team-member .icon {
+      font-size: 2.5em;
+      color: #2c6e32;
+      margin-bottom: 10px;
+    }
+
     footer {
       display: none;
     }
@@ -178,6 +178,28 @@
     .github-section a:hover {
       text-decoration: underline;
     }
+
+    /* Repository styling */
+    .repository-box {
+      background-color: #ffffff;
+      color: #2c6e32;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .repository-box a {
+      text-decoration: none;
+      color: #2c6e32;
+      font-weight: bold;
+    }
+
+    .repository-box a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -200,7 +222,6 @@
 <!-- Header -->
 <header>
   <h1>DeliveryGo</h1>
-  <img src="app-icon.png" alt="Icona dell'app" width="100">
   <p>Sistema di Logistica Intelligente per Ottimizzare le Consegne in Tempo Reale</p>
 </header>
 
@@ -233,19 +254,22 @@
 <section class="video-container">
   <h2>Video Illustrativo</h2>
   <p>Guarda come funziona **DeliveryGo** nel nostro video:</p>
-  <iframe width="800" height="450" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://drive.google.com/file/d/1wd0aGBeAj9x9s1P9QRUQhOhPAp3QtTT3/view?usp=sharing" width="800" height="450"></iframe>
+
 </section>
 
 <!-- Sezione: Il Team -->
 <section class="team-section" id="team">
   <h2>Il Team</h2>
   <div class="team-member">
+    <div class="icon">👨‍💻</div>
     <h3>Simone Settimo</h3>
     <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
     <p>Recapito telefonico: 3249565961</p>
     <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
   </div>
   <div class="team-member">
+    <div class="icon">👨‍💻</div>
     <h3>Carmelo Mandorino</h3>
     <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
     <p>Recapito telefonico: 3289290650</p>
@@ -256,17 +280,22 @@
 <!-- Sezione: Link ai GitHub -->
 <section class="github-section" id="github">
   <h2>Componenti del Sistema</h2>
-  <ul>
-    <li><strong>PositionService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-PositionService-MandorinoSettimo" target="_blank">Repository PositionService</a></li>
-    <li><strong>DeliveryService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-DeliveryService-MandorinoSettimo" target="_blank">Repository DeliveryService</a></li>
-    <li><strong>VehicleRoutingService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-VehicleRoutingProblem-MandorinoSettimo" target="_blank">Repository VehicleRoutingService</a></li>
-    <li><strong>NotificationService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-NotificationService-MandorinoSettimo" target="_blank">Repository NotificationService</a></li>
-  </ul>
-
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-PositionService-MandorinoSettimo" target="_blank">PositionService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-DeliveryService-MandorinoSettimo" target="_blank">DeliveryService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-VehicleRoutingProblem-MandorinoSettimo" target="_blank">VehicleRoutingService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-NotificationService-MandorinoSettimo" target="_blank">NotificationService Repository</a>
+  </div>
   <h2>Repository Frontend</h2>
-  <ul>
-    <li><strong>Frontend:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-Frontend-MandorinoSettimo" target="_blank">Repository Frontend</a></li>
-  </ul>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-Frontend-MandorinoSettimo" target="_blank">Frontend Repository</a>
+  </div>
 </section>
 
 </body>
