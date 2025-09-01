@@ -49,13 +49,21 @@ nav a:hover {
   background-color: #1b4d26;  /* Colore di sfondo quando si passa sopra l'elemento */
 }
 
-/* Navbar contenitore dei link */
-nav div:last-child {
-  display: flex;
-  justify-content: flex-start;  /* Allinea i link a sinistra */
-  gap: 20px; /* Aggiunge spaziatura tra i link */
-  flex-grow: 1;  /* Fa in modo che il div prenda tutto lo spazio disponibile */
-}
+<!-- Navbar con indice -->
+<nav>
+  <div>
+    <img src="app-icon.png" alt="Icona dell'app" width="40">
+    <span style="font-size: 1.5em; font-weight: bold; vertical-align: middle;">DeliveryGo</span>
+  </div>
+  <div>
+    <a href="#cos-e-deliverygo">Cos'è DeliveryGo?</a>
+    <a href="#funzionalita-principali">Funzionalità</a>
+    <a href="#architettura">Architettura</a>
+    <a href="#team">Il Team</a>
+    <a href="#github">GitHub</a>
+  </div>
+</nav>
+
 
 
     header {
