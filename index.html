@@ -92,9 +92,13 @@
       line-height: 1.6;
     }
 
+    /* Il Team */
     .team-section {
       margin-top: 40px;
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
     .team-member {
@@ -106,8 +110,7 @@
       width: 48%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      display: inline-block;
-      margin-right: 2%;
+      margin-bottom: 20px;
     }
 
     .team-member h3 {
@@ -137,11 +140,7 @@
       margin-bottom: 10px;
     }
 
-    footer {
-      display: none;
-    }
-
-    /* GitHub Section */
+    /* Sezione Repository */
     .github-section {
       margin-top: 40px;
     }
@@ -153,38 +152,17 @@
       margin-bottom: 20px;
     }
 
-    .github-section ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    .github-section li {
-      margin: 10px 0;
-      font-size: 1.2em;
-    }
-
-    .github-section a {
-      text-decoration: none;
-      color: #1b4d26;
-      font-weight: bold;
-    }
-
-    .github-section a:hover {
-      text-decoration: underline;
-    }
-
-    /* Repository styling */
     .repository-box {
       background-color: #ffffff;
       color: #2c6e32;
       padding: 15px;
       margin: 10px;
       border-radius: 8px;
-      width: 100%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
       display: inline-block;
+      width: 100%;
+      max-width: 280px; /* Limita la larghezza dei riquadri */
     }
 
     .repository-box a {
