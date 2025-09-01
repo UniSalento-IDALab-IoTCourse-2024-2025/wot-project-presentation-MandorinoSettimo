@@ -15,56 +15,34 @@
     }
 
     /* Navbar */
-    /* Navbar */
-nav {
-  background-color: #2c6e32;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 3px solid #1b4d26;
-}
+    nav {
+      background-color: #2c6e32;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 3px solid #1b4d26;
+    }
 
-nav img {
-  vertical-align: middle;
-}
+    nav img {
+      vertical-align: middle;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  margin-left: 20px;
-  padding: 8px 15px;  /* Aggiungi padding per spaziatura e migliorare la leggibilità */
-  border-radius: 4px;  /* Arrotondare gli angoli per migliorare l'aspetto */
-  transition: background-color 0.3s ease;  /* Transizione per il hover */
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-left: 20px;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-  background-color: #1b4d26;  /* Colore di sfondo quando si passa sopra l'elemento */
-}
-
-<!-- Navbar con indice -->
-<nav>
-  <div>
-    <img src="app-icon.png" alt="Icona dell'app" width="40">
-    <span style="font-size: 1.5em; font-weight: bold; vertical-align: middle;">DeliveryGo</span>
-  </div>
-  <div>
-    <a href="#cos-e-deliverygo">Cos'è DeliveryGo?</a>
-    <a href="#funzionalita-principali">Funzionalità</a>
-    <a href="#architettura">Architettura</a>
-    <a href="#team">Il Team</a>
-    <a href="#github">GitHub</a>
-  </div>
-</nav>
-
-
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     header {
       text-align: center;
@@ -115,73 +93,52 @@ nav a:hover {
     }
 
     /* Il Team */
-/* Sezione Il Team */
-.team-section {
-  margin-top: 40px;
-  text-align: center;
-}
+    .team-section {
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-.team-section h2 {
-  color: #2c6e32;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+    .team-member {
+      background-color: #fff;
+      color: #2c6e32;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 48%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-/* Contenitore del team */
-.team-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px; /* Distanza tra i membri */
-  padding: 20px;
-}
+    .team-member h3 {
+      font-size: 1.8em;
+      color: #2c6e32;
+      margin-bottom: 10px;
+    }
 
-/* Singolo membro del team */
-.team-member {
-  background-color: #fff;
-  color: #2c6e32;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 8px;
-  width: 250px; /* Aumentata la larghezza */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  word-wrap: break-word; /* Aggiunto per migliorare la gestione delle parole lunghe */
-}
+    .team-member p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
 
-/* Icona */
-.team-member .icon {
-  font-size: 2em; /* Ridotto la dimensione dell'icona */
-  color: #2c6e32;
-  margin-bottom: 10px;
-}
+    .team-member a {
+      text-decoration: none;
+      color: #2c6e32;
+      font-weight: bold;
+    }
 
-.team-member h3 {
-  font-size: 1.6em; /* Ridotto la dimensione del nome */
-  color: #2c6e32;
-  margin-bottom: 8px;
-  white-space: nowrap; /* Evita il ritorno a capo sul nome */
-}
+    .team-member a:hover {
+      text-decoration: underline;
+    }
 
-.team-member p {
-  font-size: 1.1em; /* Ridotto la dimensione del testo */
-  margin-bottom: 8px;
-}
-
-.team-member a {
-  text-decoration: none;
-  color: #2c6e32;
-  font-weight: bold;
-}
-
-.team-member a:hover {
-  text-decoration: underline;
-}
-
-
-    
-
-    
+    .team-member .icon {
+      font-size: 2.5em;
+      color: #2c6e32;
+      margin-bottom: 10px;
+    }
 
     /* Repository Section */
     .github-section {
@@ -286,24 +243,21 @@ nav a:hover {
 <!-- Sezione: Il Team -->
 <section class="team-section" id="team">
   <h2>Il Team</h2>
-  <div class="team-container">
-    <div class="team-member">
-      <div class="icon">👨‍💻</div>
-      <h3>Simone Settimo</h3>
-      <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
-      <p>Recapito telefonico: 3249565961</p>
-      <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
-    </div>
-    <div class="team-member">
-      <div class="icon">👨‍💻</div>
-      <h3>Carmelo Mandorino</h3>
-      <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
-      <p>Recapito telefonico: 3289290650</p>
-      <p>GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
-    </div>
+  <div class="team-member">
+    <div class="icon">👨‍💻</div>
+    <h3>Simone Settimo</h3>
+    <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
+    <p>Recapito telefonico: 3249565961</p>
+    <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
+  </div>
+  <div class="team-member">
+    <div class="icon">👨‍💻</div>
+    <h3>Carmelo Mandorino</h3>
+    <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
+    <p>Recapito telefonico: 3289290650</p>
+    <p>GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
   </div>
 </section>
-
 
 <!-- Sezione: Link ai GitHub -->
 <section class="github-section" id="github">
