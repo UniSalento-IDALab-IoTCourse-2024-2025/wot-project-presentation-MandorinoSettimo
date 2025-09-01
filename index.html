@@ -41,7 +41,7 @@
 
     header {
       text-align: center;
-      padding-top: 100px;
+      padding-top: 120px;
       padding-bottom: 40px;
     }
 
@@ -53,6 +53,10 @@
     header p {
       font-size: 1.3em;
       margin-top: 10px;
+    }
+
+    header img {
+      margin-top: 20px;
     }
 
     section {
@@ -105,8 +109,33 @@
       margin-top: 40px;
     }
 
+    .team-member {
+      display: inline-block;
+      background-color: white;
+      color: #2c6e32;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      width: 45%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member p {
+      font-size: 1.2em;
+    }
+
+    .team-member h3 {
+      font-size: 1.5em;
+      color: #2c6e32;
+    }
+
     footer {
       display: none;
+    }
+
+    /* Navbar adjustments */
+    nav div:last-child {
+      margin-right: 30px;
     }
   </style>
 </head>
@@ -123,12 +152,14 @@
     <a href="#funzionalita-principali">Funzionalità</a>
     <a href="#architettura">Architettura</a>
     <a href="#team">Il Team</a>
+    <a href="#github">GitHub</a>
   </div>
 </nav>
 
 <!-- Header -->
 <header>
   <h1>DeliveryGo</h1>
+  <img src="app-icon.png" alt="Icona dell'app" width="80">
   <p>Sistema di Logistica Intelligente per Ottimizzare le Consegne in Tempo Reale</p>
 </header>
 
@@ -168,9 +199,34 @@
 <!-- Sezione: Il Team -->
 <section class="team-section" id="team">
   <h2>Il Team</h2>
-  <p><strong>Simone Settimo</strong> - Sviluppatore Backend</p>
-  <p><strong>Carmelo Mandorino</strong> - Sviluppatore Frontend</p>
-  <p>Unisciti a noi nella creazione di un futuro più efficiente e sostenibile per il mondo della logistica!</p>
+  <div class="team-member">
+    <h3>Simone Settimo</h3>
+    <p>Email: simonesettimo10@libero.it</p>
+    <p>Recapito telefonico: 3249565961</p>
+    <p>Nome su GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
+  </div>
+  <div class="team-member">
+    <h3>Carmelo Mandorino</h3>
+    <p>Email: carmelomandrino@libero.it</p>
+    <p>Recapito telefonico: 3289290650</p>
+    <p>Nome su GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
+  </div>
+</section>
+
+<!-- Sezione: Link ai GitHub -->
+<section class="content-section" id="github">
+  <h2>Componenti del Sistema</h2>
+  <ul>
+    <li><strong>PositionService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-PositionService-MandorinoSettimo" target="_blank">Repository PositionService</a></li>
+    <li><strong>DeliveryService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-DeliveryService-MandorinoSettimo" target="_blank">Repository DeliveryService</a></li>
+    <li><strong>VehicleRoutingService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-VehicleRoutingProblem-MandorinoSettimo" target="_blank">Repository VehicleRoutingService</a></li>
+    <li><strong>NotificationService:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-NotificationService-MandorinoSettimo" target="_blank">Repository NotificationService</a></li>
+  </ul>
+
+  <h2>Repository Frontend</h2>
+  <ul>
+    <li><strong>Frontend:</strong> <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-Frontend-MandorinoSettimo" target="_blank">Repository Frontend</a></li>
+  </ul>
 </section>
 
 </body>
