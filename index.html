@@ -15,34 +15,48 @@
     }
 
     /* Navbar */
-    nav {
-      background-color: #2c6e32;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-      border-bottom: 3px solid #1b4d26;
-    }
+    /* Navbar */
+nav {
+  background-color: #2c6e32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 3px solid #1b4d26;
+}
 
-    nav img {
-      vertical-align: middle;
-    }
+nav img {
+  vertical-align: middle;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      margin-left: 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-left: 20px;
+  padding: 8px 15px;  /* Aggiungi padding per spaziatura e migliorare la leggibilità */
+  border-radius: 4px;  /* Arrotondare gli angoli per migliorare l'aspetto */
+  transition: background-color 0.3s ease;  /* Transizione per il hover */
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover {
+  text-decoration: underline;
+  background-color: #1b4d26;  /* Colore di sfondo quando si passa sopra l'elemento */
+}
+
+/* Navbar contenitore dei link */
+nav div:last-child {
+  display: flex;
+  justify-content: flex-start;  /* Allinea i link a sinistra */
+  gap: 20px; /* Aggiunge spaziatura tra i link */
+  flex-grow: 1;  /* Fa in modo che il div prenda tutto lo spazio disponibile */
+}
+
 
     header {
       text-align: center;
