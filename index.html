@@ -22,10 +22,10 @@
     .team-section { margin-top: 40px; text-align: center; }
     .team-section h2 { color: #2c6e32; font-size: 2.5em; margin-bottom: 20px; }
     .team-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 20px; }
-    .team-member { background-color: #fff; color: #2c6e32; padding: 15px; margin: 10px; border-radius: 8px; width: 220px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
+    .team-member { background-color: #fff; color: #2c6e32; padding: 15px; margin: 10px; border-radius: 8px; width: 280px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
     .team-member .icon { font-size: 2em; color: #2c6e32; margin-bottom: 10px; }
     .team-member h3 { font-size: 1.6em; color: #2c6e32; margin-bottom: 8px; }
-    .team-member p { font-size: 1.1em; margin-bottom: 8px; }
+    .team-member p { font-size: 1.1em; margin-bottom: 8px; word-break: break-word; }
     .team-member a { text-decoration: none; color: #2c6e32; font-weight: bold; }
     .team-member a:hover { text-decoration: underline; }
     .github-section { margin-top: 40px; text-align: center; }
@@ -41,6 +41,18 @@
     /* Stili aggiuntivi per migliorare la centratura */
     .github-section { display: flex; flex-direction: column; align-items: center; }
     .repository-container { max-width: 900px; }
+    
+    /* Centratura immagine architettura */
+    .arch-image-container { 
+      display: flex; 
+      justify-content: center; 
+      margin: 20px 0; 
+    }
+    .arch-image-container img {
+      max-width: 100%; 
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
@@ -63,14 +75,14 @@
 <!-- Header -->
 <header>
   <h1>DeliveryGo</h1>
-  <p>Sistema de Logistica Intelligente per Ottimizzare le Consegne in Tempo Reale</p>
+  <p>Sistema di Logistica Intelligente per Ottimizzare le Consegne in Tempo Reale</p>
 </header>
 
 <!-- Sezione: Cos'è DeliveryGo? -->
 <section class="content-section" id="cos-e-deliverygo">
   <h2>Cos'è DeliveryGo?</h2>
-  <p><strong>DeliveryGo</strong> è un sistema all'avanguardia che ottimizza la gestione delle consegne in tempo reale, mirato a migliorare l'efficienza dei camionisti e ridurre i tempi di consegna. Grazie a tecnologie avanzate, il sistema analizza dinamicamente vari fattori, come la disponibilità dei veicoli, la capacità e le finestre temporali di consegna, per garantire che ogni viaggio avvenga nel modo più efficiente possibile.</p>
-  <p><strong>DeliveryGo</strong> non si limita a selezionare la rotta più efficiente, ma monitora anche in tempo reale la posizione dei veicoli, risolvendo rapidamente eventuali anomalie (come guasti o deviazioni dalla rotta), mentre invia notifiche tempestive aos camionisti e agli amministratori. È il futuro della logistica, oggi!</p>
+  <p><strong>DeliveryGo</strong> è un sistema all'avanguardia che ottimizza la gestione delle consegne in tempo reale, mirato a migliorare l'efficienza dei camionisti e ridurre i tempi di consegna. Grazie a tecnologie avanzate, il sistema analizza dinamicamente vari fattori, come la disponibilità dei veicoli, la capacità e le finestre temporali di consegna, per garantire that ogni viaggio avvenga nel modo più efficiente possibile.</p>
+  <p><strong>DeliveryGo</strong> non si limita a selezionare la rotta più efficiente, ma monitora anche in tempo reale la posizione dei veicoli, risolvendo rapidamente eventuali anomalie (come guasti o deviazioni dalla rotta), mentre invia notifiche tempestive ai camionisti e agli amministratori. È il futuro della logistica, oggi!</p>
 </section>
 
 <!-- Sezione: Funzionalità principali -->
@@ -78,7 +90,7 @@
   <h2>Funzionalità Principali</h2>
   <p>Le funzionalità principali di <strong>DeliveryGo</strong> includono:</p>
   <ul>
-    <li><strong>Ottimizzazione delle rotte:</strong> DeliveryGo calcola la rotta migliore per ogni veicolo, riducendo i tempi di viaggio e i consumi. Il sistema tiene conto di vari vincoli, come la capacità del veicolo, la disponibilità dei mezzi e le finestre temporali per le consegne.</li>
+    <li><strong>Ottimizzazione delle rotte:</strong> DeliveryGo calcola la rotta migliore per ogni veicolo, riducendo i tempi de viaggio e i consumi. Il sistema tiene conto di vari vincoli, come la capacità del veicolo, la disponibilità dei mezzi e le finestre temporali per le consegne.</li>
     <li><strong>Gestione degli ordini:</strong> Il sistema automatizza l'assegnazione degli ordini ai veicoli disponibili, garantendo la massima efficienza nelle consegne e riducendo al minimo i tempi di attesa per i clienti.</li>
     <li><strong>Notifiche in tempo reale:</strong> Invia notifiche istantanee per informare i camionisti e gli amministratori su eventuali modifiche o anomalie durante il percorso, garantendo un monitoraggio costante.</li>
     <li><strong>Monitoraggio GPS:</strong> Ogni veicolo viene monitorato in tempo reale tramite GPS. Questo permette una gestione precisa delle consegne e la possibilità di risolvere rapidamente eventuali deviazioni o imprevisti.</li>
@@ -89,7 +101,9 @@
 <section class="content-section" id="architettura">
   <h2>Architettura del Sistema</h2>
   <p>Per garantire scalabilità e flessibilità, <strong>DeliveryGo</strong> si basa su un'architettura a microservizi che consente di sviluppare, aggiornare e gestire facilmente i vari componenti del sistema:</p>
-  <img src="architettura (1).png" alt="Architettura del sistema" style="max-width: 100%; border-radius: 10px;">
+  <div class="arch-image-container">
+    <img src="architettura (1).png" alt="Architettura del sistema">
+  </div>
 </section>
 
 <!-- Sezione: Video Illustrativo -->
