@@ -1,48 +1,284 @@
-/* Contenitore del team */
-.team-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px; /* Distanza tra i membri */
-  padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DeliveryGo - Sistema di Logistica Intelligente</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-/* Singolo membro del team */
-.team-member {
-  background-color: #fff;
-  color: #2c6e32;
-  padding: 15px; /* Ridotto padding */
-  margin: 10px;
-  border-radius: 8px;
-  width: 220px; /* Ridotto la larghezza per renderlo più piccolo */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
+    /* Navbar */
+    nav {
+      background-color: #2c6e32;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 3px solid #1b4d26;
+    }
 
-/* Icona */
-.team-member .icon {
-  font-size: 2em; /* Ridotto la dimensione dell'icona */
-  color: #2c6e32;
-  margin-bottom: 10px; /* Ridotto il margine tra icona e testo */
-}
+    nav img {
+      vertical-align: middle;
+    }
 
-.team-member h3 {
-  font-size: 1.6em; /* Ridotto la dimensione del nome */
-  color: #2c6e32;
-  margin-bottom: 8px; /* Ridotto il margine */
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin-left: 20px;
+    }
 
-.team-member p {
-  font-size: 1.1em; /* Ridotto la dimensione del testo */
-  margin-bottom: 8px; /* Ridotto il margine */
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-.team-member a {
-  text-decoration: none;
-  color: #2c6e32;
-  font-weight: bold;
-}
+    header {
+      text-align: center;
+      padding-top: 120px;
+      padding-bottom: 40px;
+      background-color: #2c6e32;
+      color: white;
+    }
 
-.team-member a:hover {
-  text-decoration: underline;
-}
+    header h1 {
+      margin: 0;
+      font-size: 3.5em;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section h2 {
+      color: #2c6e32;
+      font-size: 2.5em;
+      border-bottom: 2px solid #2c6e32;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .content-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .content-section li {
+      margin: 10px 0;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* Il Team */
+    .team-section {
+      margin-top: 40px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .team-member {
+      background-color: #fff;
+      color: #2c6e32;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 48%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .team-member h3 {
+      font-size: 1.8em;
+      color: #2c6e32;
+      margin-bottom: 10px;
+    }
+
+    .team-member p {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .team-member a {
+      text-decoration: none;
+      color: #2c6e32;
+      font-weight: bold;
+    }
+
+    .team-member a:hover {
+      text-decoration: underline;
+    }
+
+    .team-member .icon {
+      font-size: 2.5em;
+      color: #2c6e32;
+      margin-bottom: 10px;
+    }
+
+    /* Repository Section */
+    .github-section {
+      margin-top: 40px;
+    }
+
+    .github-section h2 {
+      color: #2c6e32;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .repository-box {
+      background-color: #ffffff;
+      color: #2c6e32;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: inline-block;
+      width: 100%;
+      max-width: 280px; /* Limita la larghezza dei riquadri */
+    }
+
+    .repository-box a {
+      text-decoration: none;
+      color: #2c6e32;
+      font-weight: bold;
+    }
+
+    .repository-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Video Section */
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar con indice -->
+<nav>
+  <div>
+    <img src="app-icon.png" alt="Icona dell'app" width="40">
+    <span style="font-size: 1.5em; font-weight: bold; vertical-align: middle;">DeliveryGo</span>
+  </div>
+  <div>
+    <a href="#cos-e-deliverygo">Cos'è DeliveryGo?</a>
+    <a href="#funzionalita-principali">Funzionalità</a>
+    <a href="#architettura">Architettura</a>
+    <a href="#team">Il Team</a>
+    <a href="#github">GitHub</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header>
+  <h1>DeliveryGo</h1>
+  <p>Sistema di Logistica Intelligente per Ottimizzare le Consegne in Tempo Reale</p>
+</header>
+
+<!-- Sezione: Cos'è DeliveryGo? -->
+<section class="content-section" id="cos-e-deliverygo">
+  <h2>Cos'è DeliveryGo?</h2>
+  <p><strong>DeliveryGo</strong> è un sistema all'avanguardia che ottimizza la gestione delle consegne in tempo reale, mirato a migliorare l'efficienza dei camionisti e ridurre i tempi di consegna. Grazie a tecnologie avanzate, il sistema analizza dinamicamente vari fattori, come la disponibilità dei veicoli, la capacità e le finestre temporali di consegna, per garantire che ogni viaggio avvenga nel modo più efficiente possibile.</p>
+  <p><strong>DeliveryGo</strong> non si limita a selezionare la rotta più efficiente, ma monitora anche in tempo reale la posizione dei veicoli, risolvendo rapidamente eventuali anomalie (come guasti o deviazioni dalla rotta), mentre invia notifiche tempestive ai camionisti e agli amministratori. È il futuro della logistica, oggi!</p>
+</section>
+
+<!-- Sezione: Funzionalità principali -->
+<section class="content-section" id="funzionalita-principali">
+  <h2>Funzionalità Principali</h2>
+  <p>Le funzionalità principali di <strong>DeliveryGo</strong> includono:</p>
+  <ul>
+    <li><strong>Ottimizzazione delle rotte:</strong> DeliveryGo calcola la rotta migliore per ogni veicolo, riducendo i tempi di viaggio e i consumi. Il sistema tiene conto di vari vincoli, come la capacità del veicolo, la disponibilità dei mezzi e le finestre temporali per le consegne.</li>
+    <li><strong>Gestione degli ordini:</strong> Il sistema automatizza l'assegnazione degli ordini ai veicoli disponibili, garantendo la massima efficienza nelle consegne e riducendo al minimo i tempi di attesa per i clienti.</li>
+    <li><strong>Notifiche in tempo reale:</strong> Invia notifiche istantanee per informare i camionisti e gli amministratori su eventuali modifiche o anomalie durante il percorso, garantendo un monitoraggio costante.</li>
+    <li><strong>Monitoraggio GPS:</strong> Ogni veicolo viene monitorato in tempo reale tramite GPS. Questo permette una gestione precisa delle consegne e la possibilità di risolvere rapidamente eventuali deviazioni o imprevisti.</li>
+  </ul>
+</section>
+
+<!-- Sezione: Architettura -->
+<section class="content-section" id="architettura">
+  <h2>Architettura del Sistema</h2>
+  <p>Per garantire scalabilità e flessibilità, <strong>DeliveryGo</strong> si basa su un'architettura a microservizi che consente di sviluppare, aggiornare e gestire facilmente i vari componenti del sistema:</p>
+  <img src="architettura (1).png" alt="Architettura del sistema" style="max-width: 100%; border-radius: 10px;">
+</section>
+
+<!-- Sezione: Video Illustrativo -->
+<section class="video-container" id="video">
+  <h2>Video Illustrativo</h2>
+  <p>Guarda come funziona <strong>DeliveryGo</strong> nel nostro video:</p>
+  <iframe src="https://drive.google.com/file/d/1wd0aGBeAj9x9s1P9QRUQhOhPAp3QtTT3/preview" allowfullscreen></iframe>
+</section>
+
+<!-- Sezione: Il Team -->
+<section class="team-section" id="team">
+  <h2>Il Team</h2>
+  <div class="team-member">
+    <div class="icon">👨‍💻</div>
+    <h3>Simone Settimo</h3>
+    <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
+    <p>Recapito telefonico: 3249565961</p>
+    <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
+  </div>
+  <div class="team-member">
+    <div class="icon">👨‍💻</div>
+    <h3>Carmelo Mandorino</h3>
+    <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
+    <p>Recapito telefonico: 3289290650</p>
+    <p>GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
+  </div>
+</section>
+
+<!-- Sezione: Link ai GitHub -->
+<section class="github-section" id="github">
+  <h2>Componenti del Sistema</h2>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-PositionService-MandorinoSettimo" target="_blank">PositionService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-DeliveryService-MandorinoSettimo" target="_blank">DeliveryService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-VehicleRoutingProblem-MandorinoSettimo" target="_blank">VehicleRoutingService Repository</a>
+  </div>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-NotificationService-MandorinoSettimo" target="_blank">NotificationService Repository</a>
+  </div>
+  <h2>Repository Frontend</h2>
+  <div class="repository-box">
+    <a href="https://github.com/UniSalento-IDALab-IoTCourse-2024-2025/wot-project-Frontend-MandorinoSettimo" target="_blank">Frontend Repository</a>
+  </div>
+</section>
+
+</body>
+</html>
