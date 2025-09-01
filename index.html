@@ -93,52 +93,70 @@
     }
 
     /* Il Team */
-    .team-section {
-      margin-top: 40px;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
+    /* Sezione Il Team */
+.team-section {
+  margin-top: 40px;
+  text-align: center;
+}
 
-    .team-member {
-      background-color: #fff;
-      color: #2c6e32;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 8px;
-      width: 48%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.team-section h2 {
+  color: #2c6e32;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
 
-    .team-member h3 {
-      font-size: 1.8em;
-      color: #2c6e32;
-      margin-bottom: 10px;
-    }
+/* Contenitore del team */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Distanza tra i membri */
+  padding: 20px;
+}
 
-    .team-member p {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
+/* Singolo membro del team */
+.team-member {
+  background-color: #fff;
+  color: #2c6e32;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-    .team-member a {
-      text-decoration: none;
-      color: #2c6e32;
-      font-weight: bold;
-    }
+.team-member .icon {
+  font-size: 2.5em;
+  color: #2c6e32;
+  margin-bottom: 15px;
+}
 
-    .team-member a:hover {
-      text-decoration: underline;
-    }
+.team-member h3 {
+  font-size: 1.8em;
+  color: #2c6e32;
+  margin-bottom: 10px;
+}
 
-    .team-member .icon {
-      font-size: 2.5em;
-      color: #2c6e32;
-      margin-bottom: 10px;
-    }
+.team-member p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.team-member a {
+  text-decoration: none;
+  color: #2c6e32;
+  font-weight: bold;
+}
+
+.team-member a:hover {
+  text-decoration: underline;
+}
+
+
+    
+
+    
 
     /* Repository Section */
     .github-section {
@@ -243,21 +261,24 @@
 <!-- Sezione: Il Team -->
 <section class="team-section" id="team">
   <h2>Il Team</h2>
-  <div class="team-member">
-    <div class="icon">👨‍💻</div>
-    <h3>Simone Settimo</h3>
-    <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
-    <p>Recapito telefonico: 3249565961</p>
-    <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
-  </div>
-  <div class="team-member">
-    <div class="icon">👨‍💻</div>
-    <h3>Carmelo Mandorino</h3>
-    <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
-    <p>Recapito telefonico: 3289290650</p>
-    <p>GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
+  <div class="team-container">
+    <div class="team-member">
+      <div class="icon">👨‍💻</div>
+      <h3>Simone Settimo</h3>
+      <p>Email: <a href="mailto:simonesettimo10@libero.it">simonesettimo10@libero.it</a></p>
+      <p>Recapito telefonico: 3249565961</p>
+      <p>GitHub: <a href="https://github.com/ilsette" target="_blank">ilsette</a></p>
+    </div>
+    <div class="team-member">
+      <div class="icon">👨‍💻</div>
+      <h3>Carmelo Mandorino</h3>
+      <p>Email: <a href="mailto:carmelomandrino@libero.it">carmelomandrino@libero.it</a></p>
+      <p>Recapito telefonico: 3289290650</p>
+      <p>GitHub: <a href="https://github.com/melo191" target="_blank">melo191</a></p>
+    </div>
   </div>
 </section>
+
 
 <!-- Sezione: Link ai GitHub -->
 <section class="github-section" id="github">
