@@ -95,8 +95,9 @@
 
     .team-section {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .team-member {
@@ -139,11 +140,6 @@
 
     footer {
       display: none;
-    }
-
-    /* Navbar adjustments */
-    nav div:last-child {
-      margin-right: 30px;
     }
 
     /* GitHub Section */
@@ -200,6 +196,14 @@
     .repository-box a:hover {
       text-decoration: underline;
     }
+
+    /* Video Section */
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
@@ -244,18 +248,17 @@
 </section>
 
 <!-- Sezione: Architettura -->
-<section class="image-container" id="architettura">
+<section class="content-section" id="architettura">
   <h2>Architettura del Sistema</h2>
-  <p>Per garantire scalabilità e flessibilità, **DeliveryGo** si basa su un'architettura a microservizi che consente di sviluppare, aggiornare e gestire facilmente i vari componenti del sistema:</p>
+  <p>Per garantire scalabilità e flessibilità, <strong>DeliveryGo</strong> si basa su un'architettura a microservizi che consente di sviluppare, aggiornare e gestire facilmente i vari componenti del sistema:</p>
   <img src="architettura (1).png" alt="Architettura del sistema" style="max-width: 100%; border-radius: 10px;">
 </section>
 
 <!-- Sezione: Video Illustrativo -->
-<section class="video-container">
+<section class="video-container" id="video">
   <h2>Video Illustrativo</h2>
-  <p>Guarda come funziona **DeliveryGo** nel nostro video:</p>
-  <iframe src="https://drive.google.com/file/d/1wd0aGBeAj9x9s1P9QRUQhOhPAp3QtTT3/view?usp=sharing" width="800" height="450"></iframe>
-
+  <p>Guarda come funziona <strong>DeliveryGo</strong> nel nostro video:</p>
+  <iframe src="https://drive.google.com/file/d/1wd0aGBeAj9x9s1P9QRUQhOhPAp3QtTT3/preview" allowfullscreen></iframe>
 </section>
 
 <!-- Sezione: Il Team -->
